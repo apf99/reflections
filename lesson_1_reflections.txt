@@ -1,0 +1,78 @@
+Lesson 1:
+
+How did viewing a diff between two versions of a file help you see the bug that was introduced?
+Using diff extracted just those lines in each of the files that were different.  This made it easier to foucus on what was different.
+
+How could having easy access to the entire history of a file make you a more efficient programmer in the long term?
+This enables you to revisit past approaches to solving a problem.  Perhaps the code that was deleted could be used in another project.  Or perhaps you'd like to roll back the code to a previous version for any number of reasons - like you have since introduced a bug.  Or perhaps a section of the code was deleted inadventently.
+
+What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved, like Google Docs does?
+Its good because it keeps the size of the commits down, but it can be bad if the user forgets to commit.
+
+Why do you think some version control systems, like Git, allow saving multiple files in one commit, while others, like Google Docs, treat each file separately?
+Often code is written across multiple files.  So in order to track changes we would need to see all the files that have changed.  Git is geared towards viewing code changes while the others, lke Google docs, are not since for most other things, changes are limited to one file at a time.
+
+How can you use the commands 'git log' and 'git diff' to view the history of files?
+'git log' will show me the history of commits and the id for each commit.  This will also allow me to view the comments for each.  Locate the id's of the commits that you are interested in and use the 'git diff' command to compare the two in order to find the differences.
+
+How might using version control make you more confident to make changes that could break something?
+Since I am able to track all the changes between each commit, I can always rollback the code (git checkout <commit_id>) to go back to a time before the bug was introduced.  Then by comparing that commit with the next one (using git diff) I can see the changes that introduced the bug.
+
+Now that you have your workspace set up, what do you want to try using Git for?
+I will use this the next time I write a lengthy piece of code.
+
+
+---------------------------------------------------------
+
+OTHER REFLECTIONS:
+
+Show all files in directory (including hidden):
+ls -a
+
+Chnge to home directory:
+cd ~
+
+Show current working directory:
+pwd
+
+Edit bash profile:
+nano .bash_profile
+
+Move (or rename) file:
+mv <old_path> <new_path>
+
+Create a new directory:
+mkdir <name>
+
+
+---------------------------------------------------------
+
+GIT COMMANDS:
+
+Clone Repository:
+git clone <url> 
+
+View Changes/Log:
+git log
+
+View Changes/Log with extra detail:
+git log --stat
+
+View changes between 2 commits:
+git diff <commit_id1> <commit_id2>
+
+View changes between 2 documents:
+diff <doc1> <doc2>
+
+Getting colored output:
+git config --global color.ui auto
+
+Rolling back to a different commit (e.g. to check for bugs):
+git checkout <commit_id>
+
+Create or initialize a new git repository (turns current directory into a git repository):
+git init
+
+Show which files have changes since the last commit:
+git status
+
