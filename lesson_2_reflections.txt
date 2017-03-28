@@ -6,7 +6,8 @@ A (hidden) .git directory is created.  This is used to store all the metadata fo
 How is the staging area different from the working directory and the repository? What value do you think it offers?
 It is an intermediary between the two.  It allows you to stage a logical group of files that you want to commit simultaneously and keep together.
 
-
+How can you use the staging area to make sure you have one commit per logical change?
+Compare what's in the staging area with the last commit by using the 'git diff --staged' command.
 
 
 
@@ -49,6 +50,12 @@ git log --stat
 View changes between 2 commits:
 git diff <commit_id1> <commit_id2>
 
+View changes between working directory and staging area:
+git diff
+
+View changes etween staging area and last most recent commit:
+git diff --staged
+
 View changes between 2 documents:
 diff <doc1> <doc2>
 
@@ -75,8 +82,11 @@ git commit
 OR
 git commit  -m "Commit message"
 
+Reset changes in working directory to last commit (** Be very careful with this **):
+git reset --hard
 
-
+Roll your code to the most recent commit:
+git checkout master
 
 
 
