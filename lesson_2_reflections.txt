@@ -1,0 +1,82 @@
+Lesson 2:
+
+What happens when you initialize a repository? Why do you need to do it?
+A (hidden) .git directory is created.  This is used to store all the metadata for the repository.
+
+How is the staging area different from the working directory and the repository? What value do you think it offers?
+It is an intermediary between the two.  It allows you to stage a logical group of files that you want to commit simultaneously and keep together.
+
+
+
+
+---------------------------------------------------------
+
+OTHER REFLECTIONS:
+
+Show all files in directory (including hidden):
+ls -a
+
+Chnge to home directory:
+cd ~
+
+Show current working directory:
+pwd
+
+Edit bash profile:
+nano .bash_profile
+
+Move (or rename) file:
+mv <old_path> <new_path>
+
+Create a new directory:
+mkdir <name>
+
+
+---------------------------------------------------------
+
+GIT COMMANDS:
+
+Clone Repository:
+git clone <url> 
+
+View Changes/Log:
+git log
+
+View Changes/Log with extra detail:
+git log --stat
+
+View changes between 2 commits:
+git diff <commit_id1> <commit_id2>
+
+View changes between 2 documents:
+diff <doc1> <doc2>
+
+Getting colored output:
+git config --global color.ui auto
+
+Rolling back to a different commit (e.g. to check for bugs):
+git checkout <commit_id>
+
+Create or initialize a new git repository (turns current directory into a git repository):
+git init
+
+Show which files have changes since the last commit:
+git status
+
+Add file(s) to staging area for initial commit:
+git add <filename>
+
+Remove file from staging area:
+git rm --cached <filename>
+
+Commit files from the staging area to the repository
+git commit 
+OR
+git commit  -m "Commit message"
+
+
+
+
+
+
+
